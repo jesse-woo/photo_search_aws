@@ -5,16 +5,12 @@ phases:
     commands:
       - echo "Building the Lambda functions"
       - zip deployment.zip index-photos.zip search-photos.zip
-    artifacts:
-      files:
-        - deployment.zip
   post_build:
     commands:
     #Put deployment.zip in the s3 bucket
       - echo "copying deployment file to s3"
       - aws s3 cp deployment.zip s3://cloudpipeline
       - echo "Deploying lambda function code"
-      - aws s3 cp s3://cloudpipeline/deployment.zip ./
       - unzip deployment.zip
       - aws lambda update-function-code --function-name "index-photos" --zip-file "fileb://index-photos.zip"
       - aws lambda update-function-code --function-name "search-photos" --zip-file "fileb://search-photos.zip"
