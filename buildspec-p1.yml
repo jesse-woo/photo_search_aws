@@ -7,7 +7,7 @@ phases:
       # Add any build commands required for your Lambda functions here
   post_build:
     commands:
-    #GOAT Boat
+    #GOAT Boat Float
       - echo "Updating Lambda function code"
       - aws lambda update-function-code --function-name "index-photos" --zip-file "fileb://index-photos.zip"
       - aws lambda update-function-code --function-name "search-photos" --zip-file "fileb://search-photos.zip"
