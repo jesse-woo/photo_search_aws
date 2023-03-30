@@ -91,7 +91,7 @@ def query_photos(keywords):
         if url:
             hit['_source']['url'] = url
             results.append(hit['_source'])
-
+    print("The results are:", results)
     return results
     
     
