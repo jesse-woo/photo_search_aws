@@ -7,7 +7,7 @@ phases:
       # Add any build commands required for your Lambda functions here
       - zip index-photos.zip index-photos
       - zip search-photos.zip search-photos
-      - zip deployment.zip index-photos.zip search-photos.zip
+      # - zip deployment.zip index-photos.zip search-photos.zip
       # - aws s3 cp deployment.zip s3://cloudpipeline/P1
   post_build:
     commands:
@@ -15,9 +15,9 @@ phases:
       - unzip deployment.zip
       - aws lambda update-function-code --function-name "index-photos" --zip-file "fileb://index-photos.zip"
       - aws lambda update-function-code --function-name "search-photos" --zip-file "fileb://search-photos.zip"
-    artifacts:
-      files:
-        - index-photos.zip
-        - search-photos.zip
-      name:
-        - deployment.zip
+artifacts:
+  files:
+    - index-photos.zip
+    - search-photos.zip
+  name:
+    - deployment.zip
