@@ -20,4 +20,4 @@ artifacts:
     - index-photos.zip
     - search-photos.zip
   name:
-    - deployment.zip
+    - "deployment"
