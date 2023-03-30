@@ -6,9 +6,9 @@ phases:
       - echo "Building the Lambda functions"
       # Add any build commands required for your Lambda functions here
       - cd index-photos
-      - zip -r index-photos.zip .
+      - zip -r index-photos.zip ../
       - cd ../search-photos
-      - zip -r search-photos.zip .
+      - zip -r search-photos.zip ../
       - cd ../
       # - zip deployment.zip index-photos.zip search-photos.zip
       # - aws s3 cp deployment.zip s3://cloudpipeline/P1
