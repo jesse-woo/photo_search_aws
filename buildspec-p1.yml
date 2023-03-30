@@ -9,6 +9,7 @@ phases:
       - zip search-photos.zip search-photos
       # - zip deployment.zip index-photos.zip search-photos.zip
       # - aws s3 cp deployment.zip s3://cloudpipeline/P1
+      - ls -al
   post_build:
     commands:
       - echo "Updating Lambda function code"
