@@ -28,7 +28,7 @@ def generate_presigned_url(bucket, object_key):
         print(e)
         print("Couldn't generate presigned url")
         return None
-
+    print("The pre-signed url is", url)
     return url
 
 def query_photos(keywords):
