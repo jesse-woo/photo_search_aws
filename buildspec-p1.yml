@@ -19,5 +19,4 @@ artifacts:
   files:
     - index-photos.zip
     - search-photos.zip
-  name:
-    - deployment
+  name: deployment
