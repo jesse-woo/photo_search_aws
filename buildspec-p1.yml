@@ -11,9 +11,12 @@ phases:
       files:
         - index-photos.zip
         - search-photos.zip
+      name:
+        - deployment.zip
   post_build:
     commands:
     #GOAT Boat Float tote
       - echo "Updating Lambda function code"
+      - unzip deployment.zip
       - aws lambda update-function-code --function-name "index-photos" --zip-file "fileb://index-photos.zip"
       - aws lambda update-function-code --function-name "search-photos" --zip-file "fileb://search-photos.zip"
