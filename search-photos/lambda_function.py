@@ -10,7 +10,7 @@ import uuid
 REGION = 'us-east-1'
 HOST = 'search-photos-werz5sjzmsxjmnxz2ctmkbbtiu.us-east-1.es.amazonaws.com'
 INDEX = 'photos'
-# You modified the lambda successfully hurray!
+# Does the update work when the S3 bucket isn't public?
 session = boto3.Session()
 
 def query_photos(keywords):
