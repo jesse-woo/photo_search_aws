@@ -10,8 +10,26 @@ import uuid
 REGION = 'us-east-1'
 HOST = 'search-photos-werz5sjzmsxjmnxz2ctmkbbtiu.us-east-1.es.amazonaws.com'
 INDEX = 'photos'
-# Does the update work when the S3 bucket isn't public?
+
 session = boto3.Session()
+
+def generate_presigned_url(bucket, object_key):
+    s3_client = boto3.client('s3')
+    try:
+        url = s3_client.generate_presigned_url(
+            'get_object',
+            Params={
+                'Bucket': bucket,
+                'Key': object_key,
+            },
+            ExpiresIn=3600,
+        )
+    except Exception as e:
+        print(e)
+        print("Couldn't generate presigned url")
+        return None
+
+    return url
 
 def query_photos(keywords):
     keywords = clean_keywords(keywords)
@@ -61,8 +79,18 @@ def query_photos(keywords):
 
     hits = res['hits']['hits']
     results = []
+    '''
     for hit in hits:
         results.append(hit['_source'])
+    '''
+
+    for hit in hits:
+        bucket = hit['_source']['bucket']
+        object_key = hit['_source']['objectKey']
+        url = generate_presigned_url(bucket, object_key)
+        if url:
+            hit['_source']['url'] = url
+            results.append(hit['_source'])
 
     return results
     
