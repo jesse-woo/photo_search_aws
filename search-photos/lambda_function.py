@@ -3,6 +3,7 @@ import os
 import boto3
 from opensearchpy import OpenSearch, RequestsHttpConnection
 from requests_aws4auth import AWS4Auth
+from botocore.exceptions import ClientError
 from inflection import singularize
 import re
 import uuid
@@ -20,11 +21,10 @@ def generate_presigned_url(bucket, object_key):
             'get_object',
             Params={
                 'Bucket': bucket,
-                'Key': object_key,
-            },
+                'Key': object_key},
             ExpiresIn=3600,
         )
-    except Exception as e:
+    except ClientError as e:
         print(e)
         print("Couldn't generate presigned url")
         return None
