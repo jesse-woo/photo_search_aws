@@ -1,0 +1,13 @@
+../../bin/dynamo-json.exe,sha256=-MStiMCGt-j_2p28HmRRtMdfprMSrzO1XNxiiVoNSQ8,108465
+__pycache__/cli.cpython-39.pyc,,
+__pycache__/dynamo_json.cpython-39.pyc,,
+cli.py,sha256=tUIt0RXsPX6nTyVQfsWbJU-wIr8wCr3QTcj81HV7khg,518
+dynamo_json-1.2.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+dynamo_json-1.2.0.dist-info/LICENSE,sha256=qaZPPqxSoDTpv0aHg0sRCH4yDKZyOJS2c9p5fdHNznk,1064
+dynamo_json-1.2.0.dist-info/METADATA,sha256=yv1XFw_DvJ-gJ-ZIFhrSNvvCln-uDIghHHvkR-4n-Ws,1671
+dynamo_json-1.2.0.dist-info/RECORD,,
+dynamo_json-1.2.0.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dynamo_json-1.2.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+dynamo_json-1.2.0.dist-info/entry_points.txt,sha256=ABF1wNVLwto5P_RjiJBo93nk4UvVXWzkTZhcZ21b5t0,49
+dynamo_json-1.2.0.dist-info/top_level.txt,sha256=7udo9X5319-2ceyQvHT_P2vG74-SPz1yFbUAdjN2_RU,16
+dynamo_json.py,sha256=gHuwr30DW45F4NR9Z5zsxpRcNwVYSOQvrXzpWWKd468,1322
