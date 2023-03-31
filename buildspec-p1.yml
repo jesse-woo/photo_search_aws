@@ -12,6 +12,8 @@ phases:
       - zip -r search-photos.zip .
       - mv search-photos.zip ..
       - cd ../
+      - aws s3 cp index-photos.zip s3://coms6998-hw2-lambda-bucket
+      - aws s3 cp search-photos.zip s3://coms6998-hw2-lambda-bucket
       # - zip deployment.zip index-photos.zip search-photos.zip
       # - aws s3 cp deployment.zip s3://cloudpipeline/P1
       - ls -al
