@@ -9,7 +9,7 @@ import re
 import uuid
 
 REGION = 'us-east-1'
-HOST = 'search-photos-werz5sjzmsxjmnxz2ctmkbbtiu.us-east-1.es.amazonaws.com'
+HOST = 'search-opensearch-photos-ctyskw2pihv2jjow4k6adja6h4.us-east-1.es.amazonaws.com'
 INDEX = 'photos'
 
 session = boto3.Session()
