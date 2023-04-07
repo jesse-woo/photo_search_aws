@@ -4,7 +4,7 @@ from opensearchpy import OpenSearch, RequestsHttpConnection
 import urllib.parse
 import datetime
 from requests_aws4auth import AWS4Auth
-
+# this is the demo with Kidus
 REGION = 'us-east-1'
 HOST = "search-opensearch-photos-ctyskw2pihv2jjow4k6adja6h4.us-east-1.es.amazonaws.com"
 INDEX = 'photos'
